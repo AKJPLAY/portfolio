@@ -1,0 +1,95 @@
+$skin-color: #fb839e;
+$bg-black-900: #000000;
+$bg-black-100: #dddddd;
+$bg-black-50: #eff0f4;
+$bg-opacity: rgba(#fff, 0.5);
+$text-black-900: #000000;
+$text-black-700: #555555;
+$text-black-600: #666666;
+$text-black-300: #bbbbbb;
+$outer-shadow: 3px 3px 3px #d0d0d0, inset 3px 3px 3px #f8f8f8;
+$outer-shadow-0: 0 0 0 #d0d0d0,0 0 0 #f8f8f8;
+$inner-shadow: inset 3px 3px 3px #d0d0d0, 3px 3px 3px #f8f8f8;
+$inner-shadow-0: inset 0 0 0 #d0d0d0 inset,0 0 0 #f8f8f8;
+$default-transition: all 0.3s ease;
+$fadeInTopAnimation: fadeInTop 0.5s ease;
+
+
+
+.style-switcher {
+    position: fixed;
+    right: 0;
+    top: 77px;
+    padding: 15px;
+    width: 200px;
+    z-index: 101;
+    border-radius: 5px;
+    transition: $default-transition;
+    transform: translateX(100%);
+    &.open {
+        transform: translateX(-15px);
+    }
+    .s-icon {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        font-size: 20px;
+        color: $text-black-900;
+        right: 100%;
+        margin-right: 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 50%;
+        i {
+            line-height: 40px;
+        }
+        &::after {
+            border-radius: 50%;
+        }
+    }
+    .style-switcher-toggler {
+        top: 0;
+    }
+    .day-night {
+        top: 55px;
+    }
+
+    h4 {
+        margin: 0 0 10px;
+        color: $text-black-700;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    .colors {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        span {
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+    }
+    .color {
+        &-1 {
+            background-color: #fb839e;
+        }
+        &-2 {
+            background-color: #ec9412;
+        }
+        &-3 {
+            background-color: #1fc586;
+        }
+        &-4 {
+            background-color: #2eb1ed;
+        }
+        &-5 {
+            background-color: #cc3a3b;
+        }
+    }
+}
