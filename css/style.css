@@ -1335,7 +1335,7 @@ Portfolio
   border-radius: 30px;
   cursor: pointer;
   font-weight: 500;
-  content: var(--text-black-600);
+  color: var(--text-black-600);
   text-transform: capitalize;
   font-size: 16px;
   -webkit-transition: var(--default-transition);
@@ -1553,7 +1553,7 @@ Portfolio popup
   font-weight: 400;
 }
 
-.portfolio-popup .pp-project-details h3 {
+.portfolio-popup .pp-project-details h2, .portfolio-popup .pp-project-details h3 {
   font-size: 20px;
   font-weight: 600;
   color: var(--text-black-700);
