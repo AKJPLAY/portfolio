@@ -14,6 +14,7 @@ window.addEventListener('scroll', () => {
 /**--------------Theme Color ---------------- */
 const alternateStyle = document.querySelectorAll('.alternate-style');
 function setActiveStyles(color) {
+     setCookie('color',color,30);
      alternateStyle.forEach((style) => {
          if(color === style.getAttribute('title')){
              style.removeAttribute('disabled');
@@ -45,6 +46,9 @@ window.addEventListener('load', () => {
         dayNight.querySelector('i').classList.add('fa-sun');
     }else {
         dayNight.querySelector('i').classList.add('fa-moon');
+    }
+    if(getCookie('color').length){
+        setActiveStyles(getCookie('color'));
     }
 })
 
