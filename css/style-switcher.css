@@ -6,8 +6,8 @@
   width: 200px;
   z-index: 101;
   border-radius: 5px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: var(--default-transition);
+  transition: var(--default-transition);
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
 }
@@ -23,7 +23,7 @@
   width: 40px;
   text-align: center;
   font-size: 20px;
-  color: #000000;
+  color: var(--text-black-900);
   right: 100%;
   margin-right: 15px;
   cursor: pointer;
@@ -50,7 +50,7 @@
 
 .style-switcher h4 {
   margin: 0 0 10px;
-  color: #555555;
+  color: var(--text-black-700);
   font-size: 16px;
   font-weight: 600;
   text-transform: capitalize;

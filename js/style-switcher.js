@@ -27,16 +27,15 @@ function setActiveStyles(color) {
 /**-----------------theme light and dark mode -----------------  */
 const dayNight = document.querySelector('.day-night');
 dayNight.addEventListener('click', () => {
-    dayNight.querySelector('i').classList.toggle('fa-sun');    
-    dayNight.querySelector('i').classList.toggle('fa-moon');
-    document.body.classList.toggle('dark');
     if(dayNight.querySelector('i').classList.contains('fa-sun')){
         setCookie('dayNight','SUN',30);   
     }
     if(dayNight.querySelector('i').classList.contains('fa-moon')){
         setCookie('dayNight','MOON',30);
     }
-    
+    dayNight.querySelector('i').classList.toggle('fa-sun');    
+    dayNight.querySelector('i').classList.toggle('fa-moon');
+    document.body.classList.toggle('dark');
 })
 window.addEventListener('load', () => {
     if(getCookie('dayNight') == 'MOON'){
